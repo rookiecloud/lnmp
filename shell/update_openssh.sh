@@ -36,9 +36,9 @@ mkdir -p $file_log/ssl
 mkdir -p $file_log/ssh
 
 #源码包链接
-zlib_download="https://rookiecloud.com/Downloads/tools/soft/$zlib_version.tar.gz"
-openssl_download="https://rookiecloud.com/Downloads/tools/soft/$openssl_version.tar.gz"
-openssh_download="https://rookiecloud.com/Downloads/tools/soft/$openssh_version.tar.gz"
+zlib_download="https://github.com/rookiecloud/lnmp/raw/main/soft/$zlib_version.tar.gz"
+openssl_download="https://github.com/rookiecloud/lnmp/raw/main/soft/$openssl_version.tar.gz"
+openssh_download="https://github.com/rookiecloud/lnmp/raw/main/soft/$openssh_version.tar.gz"
 
 
 if [ -e /root/$zlib_version.tar.gz ] ;then

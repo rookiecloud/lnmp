@@ -8,32 +8,32 @@ cd /root
 if [ -e /root/jemalloc-5.3.0.tar.bz2  ] ;then
 		 tar -jxf jemalloc-5.3.0.tar.bz2 -C /usr/local/
 	else
-		wget --no-check-certificate https://agent.rookiecloud.com/Downloads/tools/soft/jemalloc-5.3.0.tar.bz2
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/jemalloc-5.3.0.tar.bz2
          tar -jxf jemalloc-5.3.0.tar.bz2 -C /usr/local/
 fi
 
 if [ -e /root/pcre-8.45.tar.gz  ] ;then
 		tar -zxf pcre-8.45.tar.gz -C /usr/local/
 	else
-		wget --no-check-certificate https://agent.rookiecloud.com/Downloads/tools/soft/pcre-8.45.tar.gz
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/pcre-8.45.tar.gz
         tar -zxf pcre-8.45.tar.gz -C /usr/local/
 fi
 if [ -e /root/zlib-1.3.1.tar.gz  ] ;then
 		tar -zxf zlib-1.3.1.tar.gz -C /usr/local/
 	else
-		wget --no-check-certificate https://agent.rookiecloud.com/Downloads/tools/soft/zlib-1.3.1.tar.gz
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/zlib-1.3.1.tar.gz
         tar -zxf zlib-1.3.1.tar.gz -C /usr/local/
 fi
 if [ -e /root/openssl-3.1.4.tar.gz  ] ;then
 		tar -zxf openssl-3.1.4.tar.gz -C /usr/local/
 	else
-		wget --no-check-certificate https://agent.rookiecloud.com/Downloads/tools/soft/openssl-3.1.4.tar.gz
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/openssl-3.1.4.tar.gz
         tar -zxf openssl-3.1.4.tar.gz -C /usr/local/
 fi
 if [ -e /root/nginx-1.24.0.tar.gz  ] ;then
 		tar -zxf nginx-1.24.0.tar.gz -C /usr/local/
 	else
-		wget --no-check-certificate https://agent.rookiecloud.com/Downloads/tools/soft/nginx-1.24.0.tar.gz
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/nginx-1.24.0.tar.gz
         tar -zxf nginx-1.24.0.tar.gz -C /usr/local/
 fi
 

@@ -5,20 +5,20 @@ yum install -y gcc gcc-c++ openssl openssl-devel autoconf sqlite-devel krb5-deve
 if [ -e /root/oniguruma-6.7.0-1.el7.x86_64.rpm  ] ;then
 		yum -y install oniguruma-6.7.0-1.el7.x86_64.rpm
 	else
-		wget --no-check-certificate https://rookiecloud.com/Downloads/tools/soft/oniguruma-6.7.0-1.el7.x86_64.rpm
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/oniguruma-6.7.0-1.el7.x86_64.rpm
 		yum -y install oniguruma-6.7.0-1.el7.x86_64.rpm
 fi
 if [ -e /root/oniguruma-devel-6.7.0-1.el7.x86_64.rpm  ] ;then
 		tar -zxf php-7.4.33.tar.gz 
 		yum -y install oniguruma-devel-6.7.0-1.el7.x86_64.rpm
 	else
-		wget --no-check-certificate https://rookiecloud.com/Downloads/tools/soft/oniguruma-devel-6.7.0-1.el7.x86_64.rpm
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/oniguruma-devel-6.7.0-1.el7.x86_64.rpm
 		yum -y install oniguruma-devel-6.7.0-1.el7.x86_64.rpm
 fi
 if [ -e /root/php-7.4.33.tar.gz  ] ;then
 		tar -zxf php-7.4.33.tar.gz 
 	else
-		wget --no-check-certificate https://rookiecloud.com/Downloads/tools/soft/php-7.4.33.tar.gz 
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/php-7.4.33.tar.gz 
         tar -zxf php-7.4.33.tar.gz 
 fi
 
@@ -70,7 +70,7 @@ cd /root
 if [ -e /root/redis-6.0.2.tgz  ] ;then
 		tar -zxf redis-6.0.2.tgz
 	else
-		wget --no-check-certificate https://rookiecloud.com/Downloads/tools/soft/redis-6.0.2.tgz
+		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/redis-6.0.2.tgz
         tar -zxf redis-6.0.2.tgz
 fi
 

@@ -3,7 +3,7 @@
 # 设置 MySQL 版本和下载链接
 mysql_version="5.7.44"
 mysql_tar="mysql-boost-${mysql_version}.tar.gz"
-mysql_url="https://rookiecloud.com/Downloads/tools/soft/${mysql_tar}"
+mysql_url="https://github.com/rookiecloud/lnmp/raw/main/soft/${mysql_tar}"
 
 MariaDB_packages=$(rpm -qa | grep mariadb)
 

@@ -181,10 +181,16 @@ EOF
 
 cp /usr/local/mysql/support-files/mysql.server /etc/rc.d/init.d/mysqld 
 
-/etc/init.d/mysqld start 
-/usr/local/mysql/bin/mysql --version && echo -e  "\e[31m mysql install is OK\e[0m" 
+chmod +x /etc/rc.d/init.d/mysqld
 
-echo "/etc/init.d/mysqld start" >> /etc/rc.local 
+chkconfig --add mysqld
+chkconfig --level 345 mysqld on
+chkconfig --list mysqld
+
+systemctl start mysqld
+systemctl status mysqld
+
+/usr/local/mysql/bin/mysql --version && echo -e  "\e[31m mysql install is OK\e[0m" 
 
 # 添加 MySQL 环境变量
 ln -s  /usr/local/mysql/bin/mysql /usr/bin

@@ -8,7 +8,7 @@ cd /root/
 if [ -e /root/redis-7.2.4.tar.gz ] ;then
 		tar -zxf redis-7.2.4.tar.gz
 	else
-		wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/soft/redis-7.2.4.tar.gz
+		wget --no-check-certificate https://raw.githubusercontent.com/rookiecloud/lnmp/main/soft/redis-7.2.4.tar.gz
         tar -zxf redis-7.2.4.tar.gz
 fi
 

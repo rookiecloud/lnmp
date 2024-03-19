@@ -17,6 +17,8 @@ Redis 7.2.4
 ## 使用
 * 可以根据自身需要执行对应的脚本进行安装或升级
 * 可以直接将shell文件和软件包放在root目录下，执行bash ***.sh , 方便中国大陆用户使用，如果无互联网环境，请自行配置本地yum源
+* 在更新OpenSSH时，脚本会安装并开启 Telnet ，并且会关闭 Firewalld 和 Selinux ，安装结束后，Telnet 会被关闭并关闭开机启动
+
 ```shell
 wget --no-check-certificate https://github.com/rookiecloud/lnmp/raw/main/shell/update_openssh.sh && bash update_openssh.sh
 # 更新OpenSSH 和 OpenSSL

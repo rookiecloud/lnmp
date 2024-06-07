@@ -8,7 +8,7 @@ OpenSSH 9.5p1
 OpenSSL 3.1.4
 Mysql 5.7.44
 Nginx 1.24.0
-PHP 8.3.8
+PHP 7.4.33/8.3.8
  * PHP Extend
  ** Redis 6.0.2
 Redis 7.2.4
@@ -16,6 +16,7 @@ Redis 7.2.4
 ## 使用
 * 可以根据自身需要执行对应的脚本进行安装或升级
 * 可以直接将shell文件和软件包放在/soft目录下，执行bash ***.sh , 方便中国大陆用户使用，如果无互联网环境，请自行配置本地仓库
+* 系统会自行判断openssl的版本去安装PHP 7 还是 PHP 8
 * 在更新OpenSSH时，脚本会安装并开启 Telnet ，并且会关闭 Firewalld 和 Selinux ，安装成功后，Telnet 会被关闭并禁止开机启动
 
 ```shell
@@ -26,7 +27,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/rookiecloud/lnmp/m
 wget --no-check-certificate https://raw.githubusercontent.com/rookiecloud/lnmp/main/shell/install_redis.sh && bash install_redis.sh
 # 编译安装 Redis 7.2.4
 wget --no-check-certificate https://raw.githubusercontent.com/rookiecloud/lnmp/main/shell/install_php.sh && bash install_php.sh
-# 编译安装 PHP 8.3.8 并开启扩展 Redis 6.0.2
+# 编译安装 PHP 7.4.33/8.3.8 并开启扩展 Redis 6.0.2
 wget --no-check-certificate https://raw.githubusercontent.com/rookiecloud/lnmp/main/shell/install_nginx.sh && bash install_nginx.sh
 # 编译安装 Nginx 1.24.0
 ```

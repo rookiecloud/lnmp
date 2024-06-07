@@ -9,7 +9,7 @@ OpenSSL 3.1.4
 Mysql 5.7.44
 Nginx 1.24.0
 PHP 8.3.8
-PHP Extend
+ * PHP Extend
  ** Redis 6.0.2
 Redis 7.2.4
 ```

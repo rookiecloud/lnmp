@@ -24,7 +24,20 @@ else
     exit 1
 fi
 
-cd /soft/
+# 检查文件夹是否存在
+if [ -d "/soft" ]; then
+  echo "文件夹 /soft 已存在。"
+else
+  echo "文件夹 /soft 不存在，正在创建..."
+  mkdir /soft
+  if [ $? -eq 0 ]; then
+    echo "文件夹 /soft 创建成功。"
+  else
+    echo "文件夹/soft 创建失败。"
+  fi
+fi
+
+cd /soft
 
 # 下载并解压 redis
 if [ -e /soft/redis-7.2.4.tar.gz ]; then

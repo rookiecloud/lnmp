@@ -24,6 +24,14 @@ else
     exit 1
 fi
 
+# 判断 /soft 目录是否存在
+if [ -d "/soft" ]; then
+    echo "/soft 目录已存在"
+else
+    echo "/soft 目录不存在，正在创建"
+    mkdir /soft
+fi
+
 cd /soft
 
 # 下载并解压 jemalloc

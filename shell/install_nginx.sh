@@ -204,6 +204,11 @@ http{
 
     tcp_nodelay on;
 
+    map $http_upgrade $connection_upgrade {
+        default upgrade;
+        '' close;
+    }
+
 	fastcgi_connect_timeout 300;
 	fastcgi_send_timeout 300;
 	fastcgi_read_timeout 300;
@@ -233,9 +238,4 @@ systemctl enable nginx
 systemctl start nginx
 
 # 清理安装文件
-rm -rf /soft/jemalloc-5.3.0.tar.bz2
-rm -rf /soft/pcre-8.45.tar.gz
-rm -rf /soft/zlib-1.3.1.tar.gz
-rm -rf /soft/openssl-3.1.4.tar.gz
-rm -rf /soft/nginx-1.24.0.tar.gz
-rm -rf /soft/install_nginx.sh
+rm -rf /soft

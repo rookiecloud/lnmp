@@ -204,20 +204,6 @@ http{
 
     tcp_nodelay on;
 
-    map $http_upgrade $connection_upgrade {
-        default upgrade;
-        '' close;
-    }
-
-	fastcgi_connect_timeout 300;
-	fastcgi_send_timeout 300;
-	fastcgi_read_timeout 300;
-	fastcgi_buffer_size 64k;
-	fastcgi_buffers 4 64k;
-	fastcgi_busy_buffers_size 128k;
-	fastcgi_temp_file_write_size 256k;
-	fastcgi_intercept_errors on;
-
     gzip on;
     gzip_min_length  1k;
     gzip_buffers     4 16k;
@@ -228,7 +214,16 @@ http{
     gzip_proxied   expired no-cache no-store private auth;
     gzip_disable   "MSIE [1-6]\.";
 
-	include /usr/local/nginx/server.conf/*.conf;
+    fastcgi_connect_timeout 300;
+    fastcgi_send_timeout 300;
+    fastcgi_read_timeout 300;
+    fastcgi_buffer_size 64k;
+    fastcgi_buffers 4 64k;
+    fastcgi_busy_buffers_size 128k;
+    fastcgi_temp_file_write_size 256k;
+    fastcgi_intercept_errors on;
+
+    include /usr/local/nginx/server.conf/*.conf;
 }
 EOF
 ) > /usr/local/nginx/conf/nginx.conf

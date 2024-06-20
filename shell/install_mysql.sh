@@ -32,6 +32,7 @@ fi
 if [ -d "/soft/mysql-$mysql_version/build" ]; then
     sudo rm -rf /soft/mysql-$mysql_version/build
 fi
+
 mkdir -p /soft/mysql-$mysql_version/build
 
 # 下载 MySQL 源码包
@@ -39,7 +40,7 @@ if [ -e /soft/$mysql_tar ]; then
     tar -zxf /soft/$mysql_tar
 else
     wget --no-check-certificate -P /soft $mysql_url
-    tar -zxf $mysql_tar
+    tar -zxf /soft/$mysql_tar
 fi
 
 # 进入 MySQL 源码目录

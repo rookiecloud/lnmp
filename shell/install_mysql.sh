@@ -28,12 +28,20 @@ else
     exit 1
 fi
 
-# 删除可能存在的 build 目录并重新创建
-if [ -d "/soft/mysql-$mysql_version/build" ]; then
-    sudo rm -rf /soft/mysql-$mysql_version/build
+# 检查文件夹是否存在
+if [ -d "/soft" ]; then
+  echo "文件夹 /soft 已存在。"
+else
+  echo "文件夹 /soft 不存在，正在创建..."
+  mkdir /soft
+  if [ $? -eq 0 ]; then
+    echo "文件夹 /soft 创建成功。"
+  else
+    echo "文件夹/soft 创建失败。"
+  fi
 fi
 
-mkdir -p /soft/mysql-$mysql_version/build
+cd /soft
 
 # 下载 MySQL 源码包
 if [ -e /soft/$mysql_tar ]; then
@@ -42,6 +50,12 @@ else
     wget --no-check-certificate -P /soft $mysql_url
     tar -zxf /soft/$mysql_tar
 fi
+
+# 删除可能存在的 build 目录并重新创建
+if [ -d "/soft/mysql-$mysql_version/build" ]; then
+    sudo rm -rf /soft/mysql-$mysql_version/build
+fi
+mkdir -p /soft/mysql-$mysql_version/build
 
 # 进入 MySQL 源码目录
 cd /soft/mysql-$mysql_version

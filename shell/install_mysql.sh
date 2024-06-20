@@ -38,7 +38,7 @@ mkdir -p /soft/mysql-$mysql_version/build
 if [ -e /soft/$mysql_tar ]; then
     tar -zxf /soft/$mysql_tar
 else
-    wget --no-check-certificate $mysql_url
+    wget --no-check-certificate -P /soft $mysql_url
     tar -zxf $mysql_tar
 fi
 
